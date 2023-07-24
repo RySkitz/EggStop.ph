@@ -22,9 +22,6 @@ nav {
     text-transform: uppercase;
     border-bottom: 2px solid #eeeeee85;
 }
-.mobilemenu {
-    display: none;
-}
 nav img {
     max-width: 180px;
 }
