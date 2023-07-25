@@ -124,6 +124,7 @@ nav .fa-x {
 .Hero__Wave{
     width: 100%;
     height: 3%;
+    display: block;
 }
 #Services {
     height: 300px;
