@@ -1,22 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-/* 
-font-family: 'Pangolin', cursive;
-font-family: 'Poppins', sans-serif; 
-*/
+
 :root {
     --poppins-font: 'Poppins', sans-serif;
     --pangolin-font: 'Pangolin', cursive;
     --orange: #FECB57;
     --yellow: #FAEEBF;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     display: none;
 }
-* {
+html, body {
     margin: 0;
     padding: 0;
+}
+* {
     box-sizing: border-box;
-    font-family: var(--poppins-font)
+    font-family: var(--poppins-font);
+    margin: 0;
+    padding: 0;
 }
 nav {
     display: flex;
@@ -29,19 +31,23 @@ nav {
 nav img {
     max-width: 180px;
 }
-nav ul{
+nav ul {
     display: flex;
     list-style: none;
     gap: 1rem;
 }
-nav ul li a{
+nav ul li a {
     color: #242424;
     text-decoration: none;
 }
-nav ul li a:hover{
-    color: var(--orange)
+nav ul li a:hover {
+    color: var(--orange);
 }
-nav .fa-bars{
+nav .fa-bars {
+    display: none;
+    font-size: 1.25rem;
+}
+nav .fa-x {
     display: none;
     font-size: 1.25rem;
 }
@@ -49,7 +55,7 @@ nav .fa-bars{
     background-color: var(--yellow);
     font-size: 1rem;
 }
-.Hero__Container{
+.Hero__Container {
     padding: 0 15%;
     display: flex;
     justify-content: center;
@@ -61,8 +67,8 @@ nav .fa-bars{
     text-align: center;
 }
 .Hero__Container-Image img {
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: cover;
 }
 .Hero__Container-Text {
@@ -72,32 +78,32 @@ nav .fa-bars{
 .Hero__Container-Text-TextHolder {
     margin: 20px;
 }
-.Hero__Container-Text-TextHolder h2{
+.Hero__Container-Text-TextHolder h2 {
     font-size: 1.75em;
     color: var(--orange);
     text-shadow: 2px;
     -webkit-text-stroke: 1.5px black;
     font-weight: 800;
 }
-.Hero__Container-Text-TextHolder h3{
+.Hero__Container-Text-TextHolder h3 {
     font-size: 1.25em;
     font-weight: 400;
     margin-bottom: 20px;
 }
-.Hero__Container-Text-TextHolder a{
+.Hero__Container-Text-TextHolder a {
     font-size: 1em;
     text-decoration: none;
     color: black;
     text-align: center;
-    margin: 10px 2px;
 }
-.Hero__Container-Text-TextHolder .Franchise{
+.Hero__Container-Text-TextHolder .Franchise {
     border: 2px solid black;
     padding: 1px 15px;
     border-radius: 20px;
     transition: 500ms;
+    margin-bottom: 10px;
 }
-.Hero__Container-Text-TextHolder .Franchise:hover{
+.Hero__Container-Text-TextHolder .Franchise:hover {
     background-color: rgba(255, 166, 0, 0.281);
     transition: 500ms;
 }
@@ -108,31 +114,63 @@ nav .fa-bars{
     color: white;
     transition: 500ms;
 }
-.Hero__Container-Text-TextHolder .Locations:hover{
+.Hero__Container-Text-TextHolder .Locations:hover {
     background-color: rgb(255, 166, 0);
     transition: 500ms;
 }
 #Services {
     height: 300px;
-    background-color: var(--orange)
+    background-color: var(--orange);
 }
-@media (max-width: 768px){
+
+/* Tablet */
+@media (max-width: 768px) {
     nav ul {
         display: none;
+    }
+    .show .fa-bars{
+        display: none;
+    }
+    .show .fa-x{
+        display: block;
+    }
+    .show ul {
+        display: block;
+        position: absolute;
+        background-color: var(--orange);
+        right: 15%;
+        top: 8%;
+        text-align: center;
+        border-radius: 3px;
+    }
+    .show ul li{
+        padding: 20px;
+    }
+    .show ul li a{
+        color: white;
     }
     nav .fa-bars {
         display: block;
     }
-    .Hero__Container{
+    .Hero__Container {
         flex-direction: column;
     }
-    .Hero__Container-Text{
+    .Hero__Container-Text {
         text-align: center;
     }
-}
-@media (max-width: 425px){
-    #Hero{
-        font-size: .85rem;
+    .Hero__Container-Image img {
+        max-width: 300px;
+        max-height: 300px;
     }
+}
 
+/* Mobile */
+@media (max-width: 425px) {
+    #Hero {
+        font-size: .7rem;
+    }
+    .Hero__Container-Image img {
+        max-height:  200px;
+        max-width:  200px;
+    }
 }
