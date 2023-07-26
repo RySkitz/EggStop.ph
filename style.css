@@ -117,7 +117,7 @@ nav .fa-x {
     margin-bottom: 10px;
 }
 .Hero__Container-Text-TextHolder .Franchise:hover {
-    background-color: rgba(255, 166, 0, 0.281);
+    background-color: rgba(0, 0, 0, 0.281);
     transition: 500ms;
 }
 .Hero__Container-Text-TextHolder .Locations {
@@ -196,7 +196,7 @@ nav .fa-x {
     font-weight: 500;
     margin-bottom: 30px;
 }
-.Promo__Container-Text-TextHolder button {
+.Promo__Container-Text-TextHolder a{
     font-size: 1em;
     color: var(--dark-green);
     border: 2px solid var(--dark-green);
@@ -205,21 +205,22 @@ nav .fa-x {
     background-color: rgba(0, 0, 0, 0);
     cursor: pointer;
     transition: 500ms;
-
+    text-decoration: none;
 }
-.Promo__Container-Text-TextHolder button:hover{
+.Promo__Container-Text-TextHolder a:hover{
     background-color: #3f534a2d;
     transition: 500ms;
 }
 #Footer{
     background-color: white;
-    font-size: .85rem;
+    font-size: .9rem;
     overflow: hidden;
 }
 .Footer__Container {
     display: flex;
     margin: 20px 10%;
     gap: 5%;
+    justify-content: center;
 }
 .Footer__Container-Box {
     max-width: 200px;
@@ -233,6 +234,13 @@ nav .fa-x {
 }
 .Footer__Container-Box ul li i{
     margin-right: 5px;
+}
+.Footer__Container-Box ul li a{
+    color: black;
+    text-decoration: none;
+}
+.Footer__Container-Box ul li a:hover{
+    color: orange;
 }
 #Footer hr{
     margin: 0 10%;
